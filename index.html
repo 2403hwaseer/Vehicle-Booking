@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+     <meta charset="utf-8">
+     <!-- <meta content="width=device-width, initial-scale=1" name="viewport" /> -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <link rel="stylesheet" href="./css/style.css">
+     <script src="https://kit.fontawesome.com/01dc8a9552.js" crossorigin="anonymous"></script>
+     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+     <script type="text/javascript" src="./javascript/script.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <title>Vehicle Booking</title>
+    </head>
+    <body>
+        <div class="header">
+            <div class="logo col-lg-6">
+                <img src="images/logo.png" alt="ridobikologo">
+            </div>
+            <!-- <div class="title col-lg-6">
+                <p>Booking from Admin End</p>
+            </div> -->
+        </div> 
+        <div class="body">
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-3">
+                <div class="card h-100">
+                    <h4 class="card-header card-title">Customer Details</h4>
+                    <div class="card-body">
+                        <form method="post">
+                            <input type="text" name="customerName" placeholder="Customer Name"><br/>
+                            <input type="text" name="customerMobile" placeholder="Mobile Number">
+                        </form>
+                    </div>
+                </div>
+            </div> 
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-3">
+                <div class="card h-100">
+                    <h4 class="card-header card-title">Trip Details</h4>
+                    <div class="card-body">
+                        <form method="post">
+                            <div class="block1">
+                                <label for="pickup-date">Pickup Date  </label><br/>
+                                <label for="pickup-time">Pickup Time  </label><br/>
+                                <label for="drop-date">Drop Date     </label><br/>
+                                <label for="drop-time">Drop Time</label><br/>
+                            </div>
+                            <div class="block2"> 
+                                <input type="date" name="pickup-date"><br/>                           
+                                <input type="time" name="pickup-time"><br/>
+                                <input type="date" name="drop-date"><br/>
+                                <input type="time" name="drop-time">
+                            </div>                  
+                        </form>
+                    </div>
+                </div>
+            </div> 
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-3">
+                <div class="card h-100">
+                    <h4 class="card-header card-title">Vendor Details</h4>
+                    <div class="card-body">
+                        <div class="block3">
+                            <label for="booking-city">Select City</label><br/>
+                            <label for="vendor">Select Vendor</label><br/>
+                            <label for="bike">Select Bike</label><br/>
+                        </div>
+                        <div class="block4">
+                            <select name="booking-city" id="booking-city" aria-placeholder="Select City">
+                                <option>Gurgaon</option>          
+                                <option>Delhi</option>
+                                <option>Roorkee</option>
+                            </select><br/>
+                            <select name="vendor" id="vendor" aria-placeholder="Select Vendor">
+                                <option>ABC</option>
+                                <option>XYZ</option>
+                            </select><br/>
+                            <select name="bike" id="bike" aria-placeholder="Select Bike">
+                                <option>Bike 1</option>
+                                <option>Bike 2</option>
+                            </select><br/>
+                        </div>                   
+                    </div>
+                </div> 
+            </div>
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-3">
+                <div class="card h-100">
+                    <h4 class="card-header card-title">Amount</h4>
+                    <div class="card-body">
+                        <div class="block5">
+                            <label for="total-rent">Total Rent</label><br/>
+                            <label for="payment-option">Payment Option</label><br/>
+                            <label for="payable-amount">Payable Amount</label><br/>
+                            <label for="discount">Discount offered</label><br/>
+                            <label for="amount-left">Amount Left</label><br/>
+                        </div>
+                        <div class="block6">
+                            <input type="text" name="total-rent"><br/>
+                            <input type="text" name="payment-option"><br/>                        
+                            <input type="text" name="payable amount"><br/>                           
+                            <input type="text" name="discount"><br/>                            
+                            <input type="text" name="amount-left"><br/>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-6">
+                <div class="card h-100">
+                    <h4 class="card-header card-title">Comment</h4>
+                    <div class="card-body">
+                        <form method="post">
+                            <textarea placeholder="Add Comment"></textarea>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+            <div class="col col-12 col-sm-12 col-md-12 col-lg-6">
+                <div class="card h-100">
+                    <h4 class="card-header card-title">Sens SMS</h4>
+                    <div class="card-body">
+                        <button class="btn btn-danger">Click to send SMS</button>
+                    </div>
+                </div>
+            </div> 
+        </div> 
+        </div>     
+    </body>
+</html>

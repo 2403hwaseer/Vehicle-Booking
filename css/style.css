@@ -1,0 +1,45 @@
+.body{
+    margin: 0 auto;
+    padding: 2% 6%;
+}
+.block1{
+    float: left;
+    width: 30%;
+}
+.block2 {
+    float: right;
+    width: 60%;
+  
+}
+.block3{
+    float: left;
+    width: 30%;
+}
+.block4{
+    float: right;
+    width: 60%;
+}
+.block5{
+    float: left;
+    width: 40%;
+}
+.block6{
+    float: right;
+    width: 60%;
+}
+.header{
+    background-color: #555;
+}
+label{
+    padding-right: 5%;
+}
+.logo{
+    padding: 1%;
+    display: inline-block;
+    /* float: left; */
+}
+.title{
+    
+   display:  inline-block;
+   /* float: right; */
+}
