@@ -7,7 +7,6 @@
      <link rel="stylesheet" href="./css/style.css">
      <script src="https://kit.fontawesome.com/01dc8a9552.js" crossorigin="anonymous"></script>
      <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
      <script type="text/javascript" src="./javascript/script.js"></script>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
      <title>Vehicle Booking</title>
@@ -29,7 +28,8 @@
                     <div class="card-body">
                         <form method="post">
                             <input type="text" name="customerName" placeholder="Customer Name"><br/>
-                            <input type="text" name="customerMobile" placeholder="Mobile Number">
+                            <input type="text" name="customerMobile" placeholder="Mobile Number"><br/>
+                            <input type="submit" class="" name="submit-customer-deatils" placeholder="Submit">
                         </form>
                     </div>
                 </div>
@@ -39,18 +39,25 @@
                     <h4 class="card-header card-title">Trip Details</h4>
                     <div class="card-body">
                         <form method="post">
-                            <div class="block1">
-                                <label for="pickup-date">Pickup Date  </label><br/>
-                                <label for="pickup-time">Pickup Time  </label><br/>
-                                <label for="drop-date">Drop Date     </label><br/>
-                                <label for="drop-time">Drop Time</label><br/>
-                            </div>
-                            <div class="block2"> 
-                                <input type="date" name="pickup-date"><br/>                           
-                                <input type="time" name="pickup-time"><br/>
-                                <input type="date" name="drop-date"><br/>
-                                <input type="time" name="drop-time">
-                            </div>                  
+                            <table>
+                                <tr>
+                                    <td> <label for="pickup-date">Pickup Date</label></td>
+                                    <td><input type="date" name="pickup-date"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="pickup-time">Pickup Time</label></td>
+                                    <td><input type="time" name="pickup-time"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="drop-date">Drop Date</label></td>
+                                    <td><input type="date" name="drop-date"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="drop-time">Drop Time</label></td>
+                                    <td><input type="time" name="drop-time"></td>
+                                </tr>
+                            </table>
+                            <input type="submit" name="submit-time">                            
                         </form>
                     </div>
                 </div>
@@ -59,26 +66,33 @@
                 <div class="card h-100">
                     <h4 class="card-header card-title">Vendor Details</h4>
                     <div class="card-body">
-                        <div class="block3">
-                            <label for="booking-city">Select City</label><br/>
-                            <label for="vendor">Select Vendor</label><br/>
-                            <label for="bike">Select Bike</label><br/>
-                        </div>
-                        <div class="block4">
-                            <select name="booking-city" id="booking-city" aria-placeholder="Select City">
-                                <option>Gurgaon</option>          
-                                <option>Delhi</option>
-                                <option>Roorkee</option>
-                            </select><br/>
-                            <select name="vendor" id="vendor" aria-placeholder="Select Vendor">
-                                <option>ABC</option>
-                                <option>XYZ</option>
-                            </select><br/>
-                            <select name="bike" id="bike" aria-placeholder="Select Bike">
-                                <option>Bike 1</option>
-                                <option>Bike 2</option>
-                            </select><br/>
-                        </div>                   
+                        <form method="POST">
+                            <table>
+                                <tr>
+                                    <td><label for="booking-city">Select City</label></td>
+                                    <td><select name="booking-city" id="booking-city" aria-placeholder="Select City">
+                                        <option>Gurgaon</option>          
+                                        <option>Delhi</option>
+                                        <option>Roorkee</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="vendor">Select Vendor</label></td>
+                                    <td><select name="vendor" id="vendor" aria-placeholder="Select Vendor">
+                                        <option>ABC</option>
+                                        <option>XYZ</option>
+                                    </select></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="bike">Select Bike</label></td>
+                                    <td><select name="bike" id="bike" aria-placeholder="Select Bike">
+                                        <option>Bike 1</option>
+                                        <option>Bike 2</option>
+                                    </select></td>
+                                </tr>
+                            </table>
+                            <input type="submit" name="submit-vendor-detail">                                            
+                        </form>                 
                     </div>
                 </div> 
             </div>
@@ -86,38 +100,58 @@
                 <div class="card h-100">
                     <h4 class="card-header card-title">Amount</h4>
                     <div class="card-body">
-                        <div class="block5">
-                            <label for="total-rent">Total Rent</label><br/>
-                            <label for="payment-option">Payment Option</label><br/>
-                            <label for="payable-amount">Payable Amount</label><br/>
-                            <label for="discount">Discount offered</label><br/>
-                            <label for="amount-left">Amount Left</label><br/>
-                        </div>
-                        <div class="block6">
-                            <input type="text" name="total-rent"><br/>
-                            <input type="text" name="payment-option"><br/>                        
-                            <input type="text" name="payable amount"><br/>                           
-                            <input type="text" name="discount"><br/>                            
-                            <input type="text" name="amount-left"><br/>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            <div class="col col-12 col-sm-12 col-md-12 col-lg-6">
-                <div class="card h-100">
-                    <h4 class="card-header card-title">Comment</h4>
-                    <div class="card-body">
-                        <form method="post">
-                            <textarea placeholder="Add Comment"></textarea>
+                        <form method="POST">
+                            <table>
+                                <tr>
+                                    <td><label for="total-rent">Total Rent</label></td>
+                                    <td><input type="text" name="total-rent"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="payment-option">Payment Option</label></td>
+                                    <td><input type="text" name="payment-option"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="payable-amount">Payable Amount</label></td>
+                                    <td><input type="text" name="payable amount"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="discount">Discount offered</label></td>
+                                    <td><input type="text" name="discount"></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="amount-left">Amount Left</label></td>
+                                    <td><input type="text" name="amount-left"></td>
+                                </tr>
+                            </table>
+                            <input type="submit" name="submit-amount">
                         </form>
                     </div>
                 </div>
             </div> 
-            <div class="col col-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="col col-12 col-sm-12 col-md-4 col-lg-4">
                 <div class="card h-100">
-                    <h4 class="card-header card-title">Sens SMS</h4>
+                    <h4 class="card-header card-title">Comment</h4>
+                    <div class="card-body">
+                        <form method="post">
+                            <textarea placeholder="Add Comment"></textarea><br/>
+                            <input type="submit" name="submit-comment">
+                        </form>
+                    </div>
+                </div>
+            </div> 
+            <div class="col col-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <h4 class="card-header card-title">Send SMS</h4>
                     <div class="card-body">
                         <button class="btn btn-danger">Click to send SMS</button>
+                    </div>
+                </div>
+            </div> 
+            <div class="col col-12 col-sm-12 col-md-4 col-lg-4">
+                <div class="card h-100">
+                    <h4 class="card-header card-title">Confirm Booking</h4>
+                    <div class="card-body">
+                        <button class="btn btn-danger">Confirm Booking</button>
                     </div>
                 </div>
             </div> 
